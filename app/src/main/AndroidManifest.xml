@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".testi"
+            android:label="@string/title_activity_testi"></activity>
         <activity android:name=".Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +31,8 @@
         <activity android:name=".License" />
         <activity android:name=".BottomBar_9" />
         <activity android:name=".BottomBar_10" />
-        <activity android:name=".BottomBar_11"></activity>
+        <activity android:name=".BottomBar_11" />
+        <activity android:name=".test" />
     </application>
 
 </manifest>

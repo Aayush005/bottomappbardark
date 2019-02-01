@@ -18,6 +18,13 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/navigation_items" />
+        app:menu="@menu/navigation_items" >
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

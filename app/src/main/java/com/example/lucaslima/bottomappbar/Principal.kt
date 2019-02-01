@@ -21,6 +21,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.example.lucaslima.bottomappbar.R
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_bottomappbar.*
 
@@ -33,12 +35,19 @@ class Principal : AppCompatActivity() {
     val github = "https://github.com/lucaslima777"
     val email = "mailto:developer.app.lln@gmail.com"
 
+    private lateinit var database: DatabaseReference
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.principal)
         setSupportActionBar(bottom_app_bar)
         val fab = findViewById(R.id.fab) as FloatingActionButton
         val navigationView = findViewById(R.id.navigation_view) as NavigationView
+
+        database = FirebaseDatabase.getInstance().reference
+
+
 
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
@@ -82,6 +91,10 @@ class Principal : AppCompatActivity() {
         }
 
         fab.setOnClickListener {
+
+            val intent = Intent(this, test::class.java)
+            startActivity(intent)
+
             toast("Fab")
         }
 
